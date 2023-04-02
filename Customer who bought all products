@@ -1,0 +1,7 @@
+'select customer_id
+from (select customer_id,
+count(*) as peep
+from Customer
+group by 1) as teet
+where peep = 2
+order by 1'
