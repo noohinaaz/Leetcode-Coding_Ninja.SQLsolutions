@@ -1,0 +1,11 @@
+""" select p.name,
+sum(i.rest)  as rest,
+sum(i.paid)  as paid,
+sum(i.canceled)  canceled,
+sum(i.refunded)  as refunded
+from Invoice as i 
+left join Product p 
+on p.product_id = i.product_id
+group by p.name
+order by p.name
+"""
